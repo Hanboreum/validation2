@@ -23,7 +23,7 @@ public class GetController {
         return userService.findAllUsers();
     }
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/{id}")
     public UserRegister findOneUser(@PathVariable("id")int id ){
         return userService.findOneUser(id);
     }
