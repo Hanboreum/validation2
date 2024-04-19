@@ -24,5 +24,8 @@ public class UserRepository {
     public void deleteUser(int id){
         db.remove(id);
     }
+    public void userRegister(int id, UserRegister userRegister){
+        db.put(id, userRegister);
+    }
 
 }
