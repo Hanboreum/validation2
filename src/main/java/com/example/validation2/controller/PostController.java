@@ -16,7 +16,7 @@ public class PostController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/post1")
+    @PostMapping("/post1") //화면출력
     public UserRegister saveUser(@RequestBody UserRegister userRegister){
         System.out.println(userRegister);
         userService.saveUser(userRegister);
