@@ -1,5 +1,6 @@
 package com.example.validation2.model;
 
+import com.example.validation2.annotation.YearMonth;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.validation.constraints.*;
@@ -28,6 +29,8 @@ public class UserRegister {
     private int age;
 
     private String tel;
+
+    @YearMonth(pattern = "yyyy-MM-dd")
     private String birthYearMonthDay;
 
     @AssertTrue(message = "이름은 공백일 수 없습니다. ")
